@@ -25,7 +25,7 @@ job-scheduler/
 │   │   ├── java/
 │   │   │   └── com/
 │   │   │       └── niteesh/
-│   │   │           └── jobscheduler/
+│   │   │           └── job_scheduler/
 │   │   │
 │   │   │               ├── JobSchedulerApplication.java
 │   │   │               │
@@ -98,7 +98,7 @@ job-scheduler/
 │       └── java/
 │           └── com/
 │               └── niteesh/
-│                   └── jobscheduler/
+│                   └── job_scheduler/
 │                       ├── controller/
 │                       ├── service/
 │                       ├── scheduler/
@@ -648,7 +648,7 @@ and failure/retry/recovery scenarios.
 The final Java package structure is:
 
 ```text
-com.niteesh.jobscheduler
+com.niteesh.job_scheduler
 │
 ├── JobSchedulerApplication.java
 │
@@ -717,7 +717,7 @@ com.niteesh.jobscheduler
 Tests should mirror the major architectural components:
 
 ```text
-src/test/java/com/niteesh/jobscheduler/
+src/test/java/com/niteesh/job_scheduler/
 │
 ├── controller/
 │
