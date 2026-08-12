@@ -1,6 +1,8 @@
 package com.niteesh.job_scheduler.domain;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.time.Instant;
 
@@ -16,10 +18,28 @@ public class Job {
     private String scheduleType;
     private Instant scheduledAt;
     private String cronExpression;
+
+    @JdbcTypeCode(SqlTypes.JSON)
+    @Column(name = "parameters", columnDefinition = "jsonb")
     private Object parameters;
     private String status;
     private Instant createdAt;
     private Instant updatedAt;
+
+    public Job() {
+    }
+
+    public Job(Long taskId, String scheduleType, Instant scheduledAt, String cronExpression,
+               Object parameters, String status, Instant createdAt, Instant updatedAt) {
+        this.taskId = taskId;
+        this.scheduleType = scheduleType;
+        this.scheduledAt = scheduledAt;
+        this.cronExpression = cronExpression;
+        this.parameters = parameters;
+        this.status = status;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
 
     // Getters and setters
 
